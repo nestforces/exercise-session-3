@@ -1,25 +1,36 @@
 {
-    "expenses": [
-        {
-            "id":1,
-            "name": "indomie",
-            "nominal": 3000,
-            "category": "makanan",
-            "date": "2020-10-10"
-        },
-        {
-            "id":1,
-            "name": "mie sedaap",
-            "nominal": 3000,
-            "category": "makanan",
-            "date": "2020-10-12"
-        },
-        {
-            "id":1,
-            "name": "mie sarimi",
-            "nominal": 3000,
-            "category": "makanan",
-            "date": "2020-10-13"
-        }
-    ]
+  "expenses": [
+    {
+      "id": 1,
+      "name": "indomie",
+      "nominal": 3000,
+      "category": "makanan",
+      "date": "2020-10-10"
+    },
+    {
+      "id": 2,
+      "name": "mie sedaap",
+      "nominal": 3000,
+      "category": "makanan",
+      "date": "2020-10-12"
+    },
+    {
+      "id": 3,
+      "name": "mie sarimi",
+      "nominal": 3000,
+      "category": "makanan",
+      "date": "2020-10-13"
+    },
+    {
+      "date": "2023-10-18T07:16:53.192Z",
+      "id": 4
+    },
+    {
+      "name": "mie",
+      "nominal": 3000,
+      "category": "makanan",
+      "date": "2023-10-18T07:17:20.948Z",
+      "id": 5
+    }
+  ]
 }
