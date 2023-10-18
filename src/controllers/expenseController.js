@@ -1,12 +1,16 @@
-const { getExpensesService, createExpenseService } = require("../services/expenseService");
+const { getExpensesService, getExpensesDetailService, createExpenseService } = require("../services/expenseService");
 
 const getExpensesController = async (req, res) => {
   try {
+    // const {id} = req.params
+
     const expenses = await getExpensesService();
+    // const expensesId = await getExpensesByIdService(id);
 
     return res.status(200).json({
       message: "Get expenses success",
       data: expenses,
+    //   dataId: expensesId,
     });
   } catch (err) {
     return res.status(500).json({
@@ -14,6 +18,23 @@ const getExpensesController = async (req, res) => {
     });
   }
 };
+
+const getExpensesDetailController = async (req, res) => {
+    try {
+        const {id} = req.params
+    
+        const expenses = await getExpensesDetailService(id);
+    
+        return res.status(200).json({
+          message: "Get expenses success",
+          data: expenses,
+        });
+      } catch (err) {
+        return res.status(500).json({
+          message: err.message,
+        });
+      }
+}
 
 const createExpenseController = async (req, res) => {
     try {
@@ -35,5 +56,6 @@ const createExpenseController = async (req, res) => {
 
 module.exports = {
   getExpensesController,
+  getExpensesDetailController,
   createExpenseController
 };

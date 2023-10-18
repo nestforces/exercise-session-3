@@ -1,4 +1,4 @@
-const { getExpensesQuery, createExpenseQuery } = require("../queries/expenseQuery");
+const { getExpensesQuery, getExpensesDetailQuery, createExpenseQuery } = require("../queries/expenseQuery");
 
 const getExpensesService = async () => {
   try {
@@ -10,6 +10,17 @@ const getExpensesService = async () => {
   }
 };
 
+const getExpensesDetailService = async (id) => {
+  try {
+    const expenses = await getExpensesDetailQuery(id);
+
+    return expenses;
+  } catch (err) {
+    throw err;
+  }
+}
+
+
 const createExpenseService = async (name, nominal, category) => {
   try {
     const createExpense = await createExpenseQuery(name, nominal, category);
@@ -20,5 +31,6 @@ const createExpenseService = async (name, nominal, category) => {
 
 module.exports = {
   getExpensesService,
+  getExpensesDetailService,
   createExpenseService
 };
